@@ -1,0 +1,165 @@
+
+<html>
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="/style-guide/css/fluig-style-guide.min.css">
+	<link href="FLUIGADHOCPROCESS.css" type="text/css" rel="stylesheet" />
+
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+
+	<script src="/style-guide/js/fluig-style-guide.min.js"></script>
+	<script src="FLUIGADHOCPROCESS.js"></script>
+
+
+<script src='/ecm_resources/resources/assets/forms/forms.js?v=1.8.0-221004'></script>
+<link type='text/css' rel='stylesheet' href='/style-guide/css/fluig-style-guide.min.css?v=1.8.0-221004'/>
+</head>
+
+<body class="fluig-style-guide background">
+	<form enctype="" role="form" method="post" name="formAdhoc" action="" style="display:none" id="formAdHoc" onsubmit="return false;">
+		<div class="container-fluid">
+			
+			<div class="row">
+				<div class="col-md-12">
+					<span class="canvas fs-display-inline-block">
+						<img src="FLUIGADHOCPROCESS1.png" class="fs-display-inline-block">
+						<h3 class="fs-display-inline-block fs-v-align-middle">Lista de tarefas</h3>
+					</span>
+				</div>
+			</div>
+
+			<div class="row">
+				<h3 class="adhoc-subtitle">Descrição da solicitação</h3>
+				<div class="col-md-12">
+					<div class="form-group">
+						<textarea class="form-control fs-no-border fs-no-bg fs-no-shadow no-resize" rows="2" name="activity" id="activity" readonly></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<h3 class="adhoc-subtitle">Informações</h3>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="request">Solicitação</label>
+						<input name="request" id="request" type="hidden">
+						<input name="requestDescription" id="requestDescription" type="hidden">
+
+						<input name="requestText" class="form-control fs-no-border fs-no-bg fs-no-shadow" id="requestText" type="text" readonly>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="form-group">
+						<label>Abertura</label>
+						<input class="form-control fs-no-border fs-no-bg fs-no-shadow" name="opening" id="opening" type="text" readonly>
+					</div>
+				</div> 
+
+				<div class="col-md-3">
+					<div class="form-group">
+						<label>Prazo</label>
+						<input class="form-control fs-no-border fs-no-bg fs-no-shadow" name="deadline" id="deadline" type="text" readonly>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Lista de tarefas</label>
+						<input class="form-control fs-no-border fs-no-bg fs-no-shadow" name="adHocProcess" id="adHocProcess" type="text" readonly>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Status</label>
+						<span id="taskStatus" class="form-control" name="taskStatus">&nbsp;</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Descrição</label>
+						<textarea class="form-control fs-no-border fs-no-bg fs-no-shadow no-resize" name="adHocDescription" id="adhoc-description" type="textarea" rows="5" readonly></textarea>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="observation">Observação</label>
+						<textarea class="form-control" name="observation" id="observation" rows="5"></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Solicitante</label>
+						<input class="form-control fs-no-border fs-no-bg fs-no-shadow" name="requester" id="requester" type="text" readonly>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+<script type="text/template" class="ecm-zoom-results">
+<ul id="ecm-zoom-results-message" class="tt-suggestions list-unstyled">
+<li class="tip-message ellipsis fs-color-danger">Serão exibidos os primeiros 300 registros, comece a digitar para visualizar os demais itens.</li>
+</ul>
+</script><script type="text/javascript">
+if(window.FLUIGC && FLUIGC.utilities.checkBrowser().isIe()){
+function focusInput() {
+var i;
+var inputFields = document.getElementsByTagName('input');
+if (inputFields.length){
+for (i = 0; i < inputFields.length; i++){
+if (inputFields[i].type == 'text'){
+inputFields[i].focus();
+break;
+}
+}
+}
+else {
+var textAreaFields = document.getElementsByTagName('textarea');
+for (i = 0; i < textAreaFields.length; i++){
+if (textAreaFields.length){
+textAreaFields[i].focus();
+break;
+}
+}
+}
+};
+window.addEventListener('load', focusInput);}</script><script type="text/javascript">
+function dateFormat() {
+var i;
+var inputFields = document.getElementsByTagName('input');
+var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+if(is_chrome) {
+if (inputFields.length){
+for (i = 0; i < inputFields.length; i++){
+if (inputFields[i].type == 'date'){
+var match = inputFields[i].defaultValue.match('^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$');
+if(match) {
+var split = match[0].split('/');
+inputFields[i].defaultValue= split[2] + '-' + split[1] + '-' + split[0];
+}
+}
+}
+}
+}
+};
+window.addEventListener('load', dateFormat);</script></body>
+</html>

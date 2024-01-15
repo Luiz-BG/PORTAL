@@ -1,0 +1,75 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"><i class="fluigicon fluigicon-calendar-top-right icon-md" aria-hidden="true"></i>						Controle de Agendamento
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+                        <div class="form-group col-md-3">
+                            <label for="nome">Nome:</label>
+                            <input type="text" name="nome" id="nome" class="form-control">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="email">E-mail:</label>
+                            <input type="email" name="email" id="email" class="form-control">
+                        </div>
+						<div class="form-group col-md-3">
+							<label>Unidade</label>
+							<select name="segmentos" id="segmentos" class="form-control">
+								<option value="tsm">TSM (Serra do Mar)</option>
+								<option value="tvale">TVALE (Vale do Paraíba)</option>
+								<option value="tsul">TSUL (Sul de Minas)</option>
+							</select>
+						</div>
+						<div class="form-group col-md-3">
+                            <label for="modalidade">Modalidade:</label>
+                            <div class="radio">
+                                <label><input type="radio" name="modalidade" id="modalidade" value="online">Online</label>
+                                <label><input type="radio" name="modalidade" id="modalidade" value="presencial">Presencial</label>
+                            </div>
+                        </div>
+					</div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+							<label>Segmentos</label>
+							<select name="segmentosL2" id="segmentosL2" class="form-control">
+                                <option value="apps">Apps</option>
+                                <option value="automacaoIndustrial">Automação Industrial</option>
+                                <option value="comercioExterior">Comercio Exterior</option>
+                                <option value="consessionarias">Concessionárias</option>
+                                <option value="controladoria">Controladoria</option>
+                                <option value="crm">CRM</option>
+                                <option value="distribuicao">Distribuição</option>
+                                <option value="educacional">Educacional</option>
+                                <option value="fluig">Fluig</option>
+                                <option value="manufatura">Manufatura</option>
+                                <option value="materiaisPR">Materiais e Produção</option>
+                                <option value="paineis">Painéis</option>
+                                <option value="pms">PMS</option>
+                                <option value="qualidade">Qualidade</option>
+                               <option value="recursosHumanos">Recursos Humanos</option>
+                                <option value="rental">Rental</option>
+                                <option value="saude">Saúde</option>
+                                <option value="servicos">Serviços</option>
+							</select>
+						</div>
+                    </div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>

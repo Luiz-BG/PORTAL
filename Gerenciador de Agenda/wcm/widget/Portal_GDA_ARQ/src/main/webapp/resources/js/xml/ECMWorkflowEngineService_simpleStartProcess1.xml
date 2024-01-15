@@ -1,0 +1,71 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.workflow.ecm.technology.totvs.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:simpleStartProcess>
+         <username></username>
+         <password></password>
+         <companyId>1</companyId>
+         <processId></processId>
+         <comments></comments>
+         <attachments>
+            
+         </attachments>
+         <cardData>
+            
+            <item>
+               <item>nome</item>
+               <item name="nome"></item>
+            </item>
+            <item>
+               <item>email</item>
+               <item name="email"></item>
+            </item>
+            
+            <item>
+               <item>categoria</item>
+               <item name="categoria"></item>
+            </item>
+            
+            <item>
+               <item>modalidade</item>
+               <item name="modalidade"></item>
+            </item>
+            
+            <item>
+               <item>subcategoria</item>
+               <item name="subcategoria"></item>
+            </item>
+            
+            <item>
+               <item>emailClient</item>
+               <item name = "emailcliente"></item>
+            </item>
+            <item>
+               <item>cnpj</item>
+               <item name="cnpj"></item>
+            </item>
+            <item>
+               <item>cargo</item>
+               <item name="cargo"></item>
+            </item>
+            <item>
+               <item>wpp</item>
+               <item name="wpp"></item>
+            </item>
+            <item>
+               <item>razao</item>
+               <item name="razao"></item>
+            </item>
+            <item>
+               <item>contato</item>
+               <item name="contato"></item>
+            </item>
+            <item>
+               <item>briefing</item>
+               <item name="briefing"></item>
+            </item>
+
+         </cardData>
+      </ws:simpleStartProcess>
+   </soapenv:Body>
+</soapenv:Envelope>
